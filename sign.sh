@@ -8,6 +8,6 @@ rm -f gosu*.asc SHA256SUMS.asc
 for f in gosu*; do
 	gpg --output "$f.asc" --detach-sign "$f"
 done
-sha256sum gosu* > SHA256SUMS
+shasum gosu* >SHA256SUMS
 gpg --output SHA256SUMS.asc --detach-sign SHA256SUMS
 ls -lFh gosu* SHA256SUMS*
